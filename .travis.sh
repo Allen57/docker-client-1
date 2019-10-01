@@ -23,8 +23,7 @@ case "$1" in
     sudo rm -fr /var/lib/docker || :
 
     # As instructed on http://docs.master.dockerproject.org/engine/installation/linux/ubuntulinux/
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-    sudo sh -c "echo deb https://apt.dockerproject.org/repo ubuntu-trusty main > /etc/apt/sources.list.d/docker.list"
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
     if [[ "$RC" == "true" ]]; then
