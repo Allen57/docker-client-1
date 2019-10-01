@@ -51,7 +51,7 @@
   </repositories>
 
   <properties>
-  	<version.jackson>2.9.10</version.jackson>
+  	<version.jackson>2.10.0</version.jackson>
   </properties>
   
   <dependencies>
